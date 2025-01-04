@@ -1,5 +1,5 @@
+org\iris\irisPlugin\commands\FoodCommand.class
 org\iris\irisPlugin\IrisPlugin.class
-org\iris\irisPlugin\commands\Food.class
-org\iris\irisPlugin\commands\Wolves.class
-org\iris\irisPlugin\commands\Livestock.class
-org\iris\irisPlugin\commands\Heal.class
+org\iris\irisPlugin\commands\LivestockCommand.class
+org\iris\irisPlugin\commands\HealCommand.class
+org\iris\irisPlugin\commands\WolvesCommand.class

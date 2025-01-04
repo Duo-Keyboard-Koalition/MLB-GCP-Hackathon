@@ -8,9 +8,9 @@ cooldowns:
 
 # Food Command Settings
 food:
-  beef_amount: 4
-  chicken_amount: 4
-  pork_amount: 4
+  beef_amount: 8
+  chicken_amount: 8
+  pork_amount: 8
 
 # Messages
 messages:

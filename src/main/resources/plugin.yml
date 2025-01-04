@@ -1,6 +1,6 @@
 name: iris-plugin
 version: '1.0-SNAPSHOT'
-main: org.iris.irisPlugin.IrisPlugin
+main: org.duoKeyboardKoalition.irisPlugin.IrisPlugin
 api-version: '1.21'
 commands:
   heal:

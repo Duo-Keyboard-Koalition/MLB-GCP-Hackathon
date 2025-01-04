@@ -1,14 +1,14 @@
-package org.iris.irisPlugin;
+package org.duoKeyboardKoalition.irisPlugin;
 
 import org.bukkit.Bukkit;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.iris.irisPlugin.commands.Food;
-import org.iris.irisPlugin.commands.Heal;
-import org.iris.irisPlugin.commands.Wolves;
-import org.iris.irisPlugin.commands.Livestock;
+import org.duoKeyboardKoalition.irisPlugin.commands.FoodCommand;
+import org.duoKeyboardKoalition.irisPlugin.commands.HealCommand;
+import org.duoKeyboardKoalition.irisPlugin.commands.WolvesCommand;
+import org.duoKeyboardKoalition.irisPlugin.commands.LivestockCommand;
 import java.util.Objects;
 
 public final class IrisPlugin extends JavaPlugin implements Listener {
@@ -22,10 +22,10 @@ public final class IrisPlugin extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(this, this);
 
         // Pass 'this' (the plugin instance) to HealCommand constructor
-        Objects.requireNonNull(getCommand("heal")).setExecutor(new Heal(this));
-        Objects.requireNonNull(getCommand("wolves")).setExecutor(new Wolves(this));
-        Objects.requireNonNull(getCommand("food")).setExecutor(new Food(this));
-        Objects.requireNonNull(getCommand("livestock")).setExecutor(new Livestock(this));
+        Objects.requireNonNull(getCommand("heal")).setExecutor(new HealCommand(this));
+        Objects.requireNonNull(getCommand("wolves")).setExecutor(new WolvesCommand(this));
+        Objects.requireNonNull(getCommand("food")).setExecutor(new FoodCommand(this));
+        Objects.requireNonNull(getCommand("livestock")).setExecutor(new LivestockCommand(this));
         // Send a message to all online players
         Bukkit.broadcastMessage("The IrisPlugin is now up and running!");
 
