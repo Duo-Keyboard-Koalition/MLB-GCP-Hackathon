@@ -9,9 +9,6 @@ commands:
   wolves:
     description: Summons 5 loyal wolves.
     usage: /wolves
-  iris-plugin:
-    description: Reloads the plugin.
-    usage: /iris-plugin reload
   food:
     description: Gives the player raw meat.
     usage: /food
