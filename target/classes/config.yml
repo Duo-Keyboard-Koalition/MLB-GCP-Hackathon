@@ -1,0 +1,18 @@
+# Iris Plugin Configuration
+
+# Command Cooldowns (in minutes)
+cooldowns:
+  food: 15
+  heal: 30
+  wolves: 30
+
+# Food Command Settings
+food:
+  beef_amount: 4
+  chicken_amount: 4
+  pork_amount: 4
+
+# Messages
+messages:
+  food_received: "&aYou have received raw meat!"
+  cooldown_message: "&cYou must wait %time% before using this command again!"
