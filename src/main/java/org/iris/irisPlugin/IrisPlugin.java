@@ -7,15 +7,17 @@ import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.iris.irisPlugin.commands.FoodCommand;
 import org.iris.irisPlugin.commands.HealCommand;
-// import org.iris.irisPlugin.commands.ReloadCommand;
 import org.iris.irisPlugin.commands.WolvesCommand;
-
+import org.iris.irisPlugin.managers.EyeRelaxManager;
 import java.util.Objects;
 
 public final class IrisPlugin extends JavaPlugin implements Listener {
-
+    private EyeRelaxManager eyeRelaxManager;
     @Override
     public void onEnable() {
+
+        eyeRelaxManager = new EyeRelaxManager(this);
+
         getConfig().options().copyDefaults(true);
         saveDefaultConfig();
         loadConfiguration(); // Load plugin configuration
