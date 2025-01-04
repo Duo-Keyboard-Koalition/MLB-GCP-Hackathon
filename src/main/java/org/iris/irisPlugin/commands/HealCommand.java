@@ -16,7 +16,6 @@ import java.util.UUID;
 
 public class HealCommand implements CommandExecutor {
     private final HashMap<UUID, Long> cooldowns = new HashMap<>();
-    private final long cooldownTime = 30 * 60 * 1000; // 30 minutes
     private final File cooldownFile;
     private final FileConfiguration cooldownConfig;
     private final Plugin plugin;
@@ -60,6 +59,10 @@ public class HealCommand implements CommandExecutor {
                 if (!player.hasPermission("irisplugin.heal.bypass")) {
                     if (cooldowns.containsKey(playerUUID)) {
                         long lastUsed = cooldowns.get(playerUUID);
+                        // 30 minutes
+                        // long COOLDOWN_TIME = (long) plugin.getConfig().getInt("cooldowns.wolves", 30) * 60 * 1000;
+                        //
+                        long cooldownTime = (long) plugin.getConfig().getInt("cooldowns.heal", 30) * 60 * 1000;
                         if (currentTime - lastUsed < cooldownTime) {
                             long timeLeft = (cooldownTime - (currentTime - lastUsed)) / 1000;
                             player.sendMessage(ChatColor.RED + "You must wait " +

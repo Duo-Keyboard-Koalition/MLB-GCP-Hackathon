@@ -18,7 +18,6 @@ import java.util.UUID;
 
 public class FoodCommand implements CommandExecutor {
     private final HashMap<UUID, Long> cooldowns = new HashMap<>();
-    private final long COOLDOWN_TIME = 15 * 60 * 1000; // 15 minutes in milliseconds
     private final File cooldownFile;
     private final FileConfiguration cooldownConfig;
     private final Plugin plugin;
@@ -63,6 +62,10 @@ public class FoodCommand implements CommandExecutor {
         // Check cooldown
         if (cooldowns.containsKey(playerId)) {
             long timeElapsed = System.currentTimeMillis() - cooldowns.get(playerId);
+            // 15 minutes in milliseconds
+            // long COOLDOWN_TIME = (long) plugin.getConfig().getInt("cooldowns.wolves", 30) * 60 * 1000;
+            //
+            long COOLDOWN_TIME = (long) plugin.getConfig().getInt("cooldowns.food", 15) * 60 * 1000;
             if (timeElapsed < COOLDOWN_TIME) {
                 long remainingTime = (COOLDOWN_TIME - timeElapsed) / 1000;
                 long minutes = remainingTime / 60;
