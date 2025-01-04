@@ -10,3 +10,6 @@ Commands:
 Permissions:
 irisplugin.heal.bypass - bypasses the heal cooldown
 irisplugin.reload - allows the plugin to be reloaded
+
+
+Future add ons
