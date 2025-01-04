@@ -5,18 +5,15 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.iris.irisPlugin.commands.FoodCommand;
-import org.iris.irisPlugin.commands.HealCommand;
-import org.iris.irisPlugin.commands.WolvesCommand;
-import org.iris.irisPlugin.managers.EyeRelaxManager;
+import org.iris.irisPlugin.commands.Food;
+import org.iris.irisPlugin.commands.Heal;
+import org.iris.irisPlugin.commands.Wolves;
+import org.iris.irisPlugin.commands.Livestock;
 import java.util.Objects;
 
 public final class IrisPlugin extends JavaPlugin implements Listener {
-    private EyeRelaxManager eyeRelaxManager;
     @Override
     public void onEnable() {
-
-        eyeRelaxManager = new EyeRelaxManager(this);
 
         getConfig().options().copyDefaults(true);
         saveDefaultConfig();
@@ -25,10 +22,10 @@ public final class IrisPlugin extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(this, this);
 
         // Pass 'this' (the plugin instance) to HealCommand constructor
-        Objects.requireNonNull(getCommand("heal")).setExecutor(new HealCommand(this));
-        Objects.requireNonNull(getCommand("wolves")).setExecutor(new WolvesCommand(this));
-        Objects.requireNonNull(getCommand("food")).setExecutor(new FoodCommand(this));
-
+        Objects.requireNonNull(getCommand("heal")).setExecutor(new Heal(this));
+        Objects.requireNonNull(getCommand("wolves")).setExecutor(new Wolves(this));
+        Objects.requireNonNull(getCommand("food")).setExecutor(new Food(this));
+        Objects.requireNonNull(getCommand("livestock")).setExecutor(new Livestock(this));
         // Send a message to all online players
         Bukkit.broadcastMessage("The IrisPlugin is now up and running!");
 
@@ -42,7 +39,7 @@ public final class IrisPlugin extends JavaPlugin implements Listener {
         getLogger().info("- Food: " + getConfig().getInt("cooldowns.food", 15));
         getLogger().info("- Heal: " + getConfig().getInt("cooldowns.heal", 30));
         getLogger().info("- Wolves: " + getConfig().getInt("cooldowns.wolves", 30));
-
+        getLogger().info("- Livestock: " + getConfig().getInt("cooldowns.livestock", 30));
         // Log food amounts
         getLogger().info("Food Amounts:");
         getLogger().info("- Beef: " + getConfig().getInt("food.beef_amount", 4));

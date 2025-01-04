@@ -1,5 +1,5 @@
-C:\Users\irisd\IdeaProjects\iris-plugin\src\main\java\org\iris\irisPlugin\commands\FoodCommand.java
-C:\Users\irisd\IdeaProjects\iris-plugin\src\main\java\org\iris\irisPlugin\commands\HealCommand.java
-C:\Users\irisd\IdeaProjects\iris-plugin\src\main\java\org\iris\irisPlugin\commands\WolvesCommand.java
-C:\Users\irisd\IdeaProjects\iris-plugin\src\main\java\org\iris\irisPlugin\IrisPlugin.java
-C:\Users\irisd\IdeaProjects\iris-plugin\src\main\java\org\iris\irisPlugin\managers\EyeRelaxManager.java
+C:\Users\darcy\IdeaProjects\iris-plugin\src\main\java\org\iris\irisPlugin\commands\Food.java
+C:\Users\darcy\IdeaProjects\iris-plugin\src\main\java\org\iris\irisPlugin\commands\Heal.java
+C:\Users\darcy\IdeaProjects\iris-plugin\src\main\java\org\iris\irisPlugin\commands\Livestock.java
+C:\Users\darcy\IdeaProjects\iris-plugin\src\main\java\org\iris\irisPlugin\commands\Wolves.java
+C:\Users\darcy\IdeaProjects\iris-plugin\src\main\java\org\iris\irisPlugin\IrisPlugin.java

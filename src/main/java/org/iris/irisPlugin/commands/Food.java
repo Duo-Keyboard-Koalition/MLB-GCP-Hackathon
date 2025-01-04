@@ -16,13 +16,13 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.UUID;
 
-public class FoodCommand implements CommandExecutor {
+public class Food implements CommandExecutor {
     private final HashMap<UUID, Long> cooldowns = new HashMap<>();
     private final File cooldownFile;
     private final FileConfiguration cooldownConfig;
     private final Plugin plugin;
 
-    public FoodCommand(Plugin plugin) {
+    public Food(Plugin plugin) {
         this.plugin = plugin;
         this.cooldownFile = new File(plugin.getDataFolder(), "food_cooldowns.yml");
         this.cooldownConfig = YamlConfiguration.loadConfiguration(cooldownFile);
@@ -82,7 +82,10 @@ public class FoodCommand implements CommandExecutor {
         ItemStack chicken = new ItemStack(Material.CHICKEN, 4);
         ItemStack pork = new ItemStack(Material.PORKCHOP, 4);
 
-        player.getInventory().addItem(beef, chicken, pork);
+
+        player.getWorld().dropItemNaturally(player.getLocation(), beef);
+        player.getWorld().dropItemNaturally(player.getLocation(), chicken);
+        player.getWorld().dropItemNaturally(player.getLocation(), pork);
 
         // Set cooldown and save to file
         cooldowns.put(playerId, System.currentTimeMillis());

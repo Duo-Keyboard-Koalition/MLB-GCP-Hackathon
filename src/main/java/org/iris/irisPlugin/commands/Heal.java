@@ -14,13 +14,13 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.UUID;
 
-public class HealCommand implements CommandExecutor {
+public class Heal implements CommandExecutor {
     private final HashMap<UUID, Long> cooldowns = new HashMap<>();
     private final File cooldownFile;
     private final FileConfiguration cooldownConfig;
     private final Plugin plugin;
 
-    public HealCommand(Plugin plugin) {
+    public Heal(Plugin plugin) {
         this.plugin = plugin;
         this.cooldownFile = new File(plugin.getDataFolder(), "heal_cooldowns.yml");
         this.cooldownConfig = YamlConfiguration.loadConfiguration(cooldownFile);

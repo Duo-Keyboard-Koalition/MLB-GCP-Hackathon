@@ -12,3 +12,6 @@ commands:
   food:
     description: Gives the player raw meat.
     usage: /food
+  livestock:
+    description: Summons a sheep, pig, and mooshroom.
+    usage: /livestock
