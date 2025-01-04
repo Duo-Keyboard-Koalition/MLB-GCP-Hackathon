@@ -6,7 +6,7 @@
 
     <groupId>org.iris</groupId>
     <artifactId>iris-plugin</artifactId>
-    <version>1.0-SNAPSHOT-WOLVES-COOLDOWN</version>
+    <version>1.0-SNAPSHOT-FOOD-COOLDOWN</version>
     <packaging>jar</packaging>
 
     <name>iris-plugin</name>

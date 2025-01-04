@@ -5,6 +5,10 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.iris.irisPlugin.commands.FoodCommand;
+import org.iris.irisPlugin.commands.HealCommand;
+import org.iris.irisPlugin.commands.ReloadCommand;
+import org.iris.irisPlugin.commands.WolvesCommand;
 
 public final class IrisPlugin extends JavaPlugin implements Listener {
 
@@ -17,6 +21,7 @@ public final class IrisPlugin extends JavaPlugin implements Listener {
         getCommand("heal").setExecutor(new HealCommand(this));
         getCommand("wolves").setExecutor(new WolvesCommand());
         getCommand("iris-plugin").setExecutor(new ReloadCommand(this));
+        getCommand("food").setExecutor(new FoodCommand());
 
         // Send a message to all online players
         Bukkit.broadcastMessage("The IrisPlugin is now up and running!");

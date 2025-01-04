@@ -1,4 +1,5 @@
-org\iris\irisPlugin\HealCommand.class
-org\iris\irisPlugin\WolvesCommand.class
+org\iris\irisPlugin\commands\FoodCommand.class
 org\iris\irisPlugin\IrisPlugin.class
-org\iris\irisPlugin\ReloadCommand.class
+org\iris\irisPlugin\commands\ReloadCommand.class
+org\iris\irisPlugin\commands\HealCommand.class
+org\iris\irisPlugin\commands\WolvesCommand.class

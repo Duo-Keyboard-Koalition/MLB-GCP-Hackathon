@@ -12,3 +12,6 @@ commands:
   iris-plugin:
     description: Reloads the plugin.
     usage: /iris-plugin reload
+  food:
+    description: Gives the player raw meat.
+    usage: /food

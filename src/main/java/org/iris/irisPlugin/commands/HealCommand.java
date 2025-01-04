@@ -1,4 +1,4 @@
-package org.iris.irisPlugin;
+package org.iris.irisPlugin.commands;
 
 import org.bukkit.ChatColor;
 import org.bukkit.configuration.file.FileConfiguration;

@@ -1,9 +1,10 @@
-package org.iris.irisPlugin;
+package org.iris.irisPlugin.commands;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.iris.irisPlugin.IrisPlugin;
 
 public class ReloadCommand implements CommandExecutor {
     private final IrisPlugin plugin;
