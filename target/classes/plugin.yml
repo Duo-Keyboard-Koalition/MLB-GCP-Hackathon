@@ -1,0 +1,14 @@
+name: iris-plugin
+version: '1.0-SNAPSHOT'
+main: org.iris.irisPlugin.IrisPlugin
+api-version: '1.21'
+commands:
+  heal:
+    description: Heals the player to full health.
+    usage: /heal
+  wolves:
+    description: Summons 5 loyal wolves.
+    usage: /wolves
+  iris-plugin:
+    description: Reloads the plugin.
+    usage: /iris-plugin reload

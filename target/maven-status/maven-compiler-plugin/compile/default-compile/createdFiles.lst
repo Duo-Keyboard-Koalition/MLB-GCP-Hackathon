@@ -1,0 +1,4 @@
+org\iris\irisPlugin\HealCommand.class
+org\iris\irisPlugin\WolvesCommand.class
+org\iris\irisPlugin\IrisPlugin.class
+org\iris\irisPlugin\ReloadCommand.class
