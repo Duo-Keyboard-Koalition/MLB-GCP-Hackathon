@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sports Digest</string>
+    <string name="welcome_message">Sports Digestへようこそ</string>
+    <string name="select_teams">チームを選択</string>
+    <string name="select_players">選手を選択</string>
+</resources>
